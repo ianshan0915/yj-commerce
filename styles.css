@@ -300,6 +300,12 @@ h2 {
   padding: 3.2rem 0;
 }
 
+.systems-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
 .systems .label {
   margin-bottom: 1.2rem;
   font-size: 0.8rem;
@@ -490,6 +496,11 @@ h2 {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .systems-grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
   }
 }
 
