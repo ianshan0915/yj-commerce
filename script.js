@@ -29,13 +29,18 @@ nav.addEventListener("click", (event) => {
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const isChinese = document.documentElement.lang.startsWith("zh");
   const formData = new FormData(contactForm);
   const name = String(formData.get("name") || "").trim();
   const email = String(formData.get("email") || "").trim();
   const message = String(formData.get("message") || "").trim();
-  const subject = encodeURIComponent("YJ Commerce inquiry");
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+  const subject = encodeURIComponent(isChinese ? "YJ Commerce 咨询" : "YJ Commerce inquiry");
+  const nameLabel = isChinese ? "姓名" : "Name";
+  const emailLabel = isChinese ? "邮箱" : "Email";
+  const body = encodeURIComponent(`${nameLabel}: ${name}\n${emailLabel}: ${email}\n\n${message}`);
 
   window.location.href = `mailto:hello@yjcommerce.nl?subject=${subject}&body=${body}`;
-  formNote.textContent = "Opening your email app with the message prepared.";
+  formNote.textContent = isChinese
+    ? "正在打开您的邮件应用，内容已准备好。"
+    : "Opening your email app with the message prepared.";
 });
