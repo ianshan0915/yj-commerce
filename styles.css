@@ -148,12 +148,28 @@ h3 {
 /* Hero */
 
 .hero {
+  position: relative;
   overflow: hidden;
-  padding: 4.5rem 0 0;
+  padding: 7.5rem 0 8.5rem;
   background: #0e1e30;
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse 58% 62% at 50% 45%,
+    rgba(14, 30, 48, 0.82) 0%,
+    rgba(14, 30, 48, 0) 72%
+  );
+  pointer-events: none;
+}
+
 .hero-intro {
+  position: relative;
+  z-index: 1;
   text-align: center;
 }
 
@@ -200,13 +216,15 @@ h1 {
 }
 
 .hero-map {
-  margin-top: 2.2rem;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .hero-map canvas {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .btn {
@@ -523,7 +541,7 @@ h2 {
   }
 
   .hero {
-    padding: 3rem 0 0;
+    padding: 4.5rem 0 5.5rem;
   }
 
   section {

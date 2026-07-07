@@ -152,23 +152,27 @@ import MAP_DOTS from "./map-dots.js";
   };
 
   const canvas = renderer.domElement;
-  canvas.style.width = "100%";
-  canvas.style.height = "auto";
-  canvas.style.display = "block";
-  canvas.style.aspectRatio = window.innerWidth < 700 ? "1.7" : "2.4";
   mount.appendChild(canvas);
 
   const resize = () => {
-    const w = mount.clientWidth;
-    const h = canvas.clientHeight || (w / 2.4);
+    const w = mount.clientWidth || 1;
+    const h = mount.clientHeight || 1;
     renderer.setSize(w, h, false);
-    // Fixed latitude window (cuts the far south, keeps all routes); the
-    // longitude span follows the canvas aspect, centered between the
-    // route endpoints.
-    const latSpan = 118;
+    const aspect = w / h;
+    let latSpan, lonSpan, lonMid;
+    if (aspect >= 1.4) {
+      // Wide: fixed latitude window, longitude follows the aspect.
+      latSpan = 118;
+      lonSpan = latSpan * aspect;
+      lonMid = 25;
+    } else {
+      // Tall (mobile): fix the longitude window so both route ends stay
+      // in view, and let latitude grow with empty sky above and below.
+      lonSpan = 215;
+      latSpan = lonSpan / aspect;
+      lonMid = 45;
+    }
     const latMid = 16;
-    const lonSpan = latSpan * (w / h);
-    const lonMid = 25;
     camera.left = lonMid - lonSpan / 2;
     camera.right = lonMid + lonSpan / 2;
     camera.top = latMid + latSpan / 2;
