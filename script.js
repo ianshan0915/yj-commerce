@@ -27,7 +27,7 @@ nav.addEventListener("click", (event) => {
 });
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
-  const targets = document.querySelectorAll(".section-head, .svc, .step, .diagram-card, .connect-grid > div, .contact-grid > div");
+  const targets = document.querySelectorAll(".section-head, .svc, .step, .diagram-card, .connect-grid > div, .company-grid > div, .contact-grid > div");
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
