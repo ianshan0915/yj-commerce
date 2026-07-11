@@ -58,7 +58,7 @@ contactForm.addEventListener("submit", (event) => {
   const emailLabel = isChinese ? "邮箱" : "Email";
   const body = encodeURIComponent(`${nameLabel}: ${name}\n${emailLabel}: ${email}\n\n${message}`);
 
-  window.location.href = `mailto:hello@yjcommerce.nl?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:support@yjcommerce.nl?subject=${subject}&body=${body}`;
   formNote.textContent = isChinese
     ? "正在打开您的邮件应用，内容已准备好。"
     : "Opening your email app with the message prepared.";
