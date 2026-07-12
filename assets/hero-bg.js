@@ -100,6 +100,7 @@ import MAP_DOTS from "./map-dots.js";
 
   // City markers and labels
   const SCALE = 6;
+  const labels = [];
   const labelFont = `600 ${13 * SCALE}px system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif`;
   for (const city of Object.values(CITIES)) {
     const m = new THREE.Mesh(endGeo, endMat);
@@ -127,7 +128,44 @@ import MAP_DOTS from "./map-dots.js";
     );
     label.position.set(city.lon + city.dx + (city.dx > 0 ? wUnits / 2 : -wUnits / 2), city.lat + city.dy, 3);
     scene.add(label);
+    labels.push({ mesh: label, mat: label.material, w: wUnits, h: hUnits });
   }
+
+  // Hide any label that would sit behind the hero copy: project its world
+  // rect to pixels and test it against each text block (not the whole
+  // .hero-intro, whose box spans the full wrap width). Depends on the
+  // current camera window, so this runs from resize().
+  const intro = document.querySelector(".hero-intro");
+  const syncLabels = () => {
+    if (!intro) return;
+    const m = mount.getBoundingClientRect();
+    const pad = 10;
+    const blocks = [...intro.children].map((el) => {
+      const r = el.getBoundingClientRect();
+      return {
+        left: r.left - m.left - pad,
+        right: r.right - m.left + pad,
+        top: r.top - m.top - pad,
+        bottom: r.bottom - m.top + pad,
+      };
+    });
+    const lonSpan = camera.right - camera.left;
+    const latSpan = camera.top - camera.bottom;
+    for (const l of labels) {
+      const cx = ((l.mesh.position.x - camera.left) / lonSpan) * m.width;
+      const cy = ((camera.top - l.mesh.position.y) / latSpan) * m.height;
+      const lw = (l.w / lonSpan) * m.width;
+      const lh = (l.h / latSpan) * m.height;
+      const hit = blocks.some(
+        (b) =>
+          cx + lw / 2 > b.left &&
+          cx - lw / 2 < b.right &&
+          cy + lh / 2 > b.top &&
+          cy - lh / 2 < b.bottom
+      );
+      l.mat.opacity = hit ? 0 : 1;
+    }
+  };
 
   // Pulses along the routes
   const pulseGeo = new THREE.CircleGeometry(1.3, 16);
@@ -178,9 +216,13 @@ import MAP_DOTS from "./map-dots.js";
     camera.top = latMid + latSpan / 2;
     camera.bottom = latMid - latSpan / 2;
     camera.updateProjectionMatrix();
+    syncLabels();
   };
   resize();
-  new ResizeObserver(resize).observe(mount);
+  new ResizeObserver(() => {
+    resize();
+    renderer.render(scene, camera);
+  }).observe(mount);
 
   placePulses();
   renderer.render(scene, camera);
