@@ -27,7 +27,7 @@ nav.addEventListener("click", (event) => {
 });
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
-  const targets = document.querySelectorAll(".section-head, .svc, .step, .diagram-card, .connect-grid > div, .company-grid > div, .contact-grid > div");
+  const targets = document.querySelectorAll(".section-head, .svc, .step, .diagram-card, .connect-grid > div, .contact-grid > div");
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -45,21 +45,21 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "Intersect
   });
 }
 
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+if (contactForm && formNote) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  const isChinese = document.documentElement.lang.startsWith("zh");
-  const formData = new FormData(contactForm);
-  const name = String(formData.get("name") || "").trim();
-  const email = String(formData.get("email") || "").trim();
-  const message = String(formData.get("message") || "").trim();
-  const subject = encodeURIComponent(isChinese ? "YJ Commerce 咨询" : "YJ Commerce inquiry");
-  const nameLabel = isChinese ? "姓名" : "Name";
-  const emailLabel = isChinese ? "邮箱" : "Email";
-  const body = encodeURIComponent(`${nameLabel}: ${name}\n${emailLabel}: ${email}\n\n${message}`);
+    const isChinese = document.documentElement.lang.startsWith("zh");
+    const formData = new FormData(contactForm);
+    const name = String(formData.get("name") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+    const subject = encodeURIComponent(isChinese ? "YJ Commerce 咨询" : "YJ Commerce inquiry");
+    const nameLabel = isChinese ? "姓名" : "Name";
+    const body = encodeURIComponent(`${nameLabel}: ${name}\n\n${message}`);
 
-  window.location.href = `mailto:support@yjcommerce.nl?subject=${subject}&body=${body}`;
-  formNote.textContent = isChinese
-    ? "正在打开您的邮件应用，内容已准备好。"
-    : "Opening your email app with the message prepared.";
-});
+    window.location.href = `mailto:support@yjcommerce.nl?subject=${subject}&body=${body}`;
+    formNote.textContent = isChinese
+      ? "正在打开邮件应用。发送前请确认邮件内容。"
+      : "Opening your email app. Please review the message and press Send.";
+  });
+}

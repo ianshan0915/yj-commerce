@@ -396,60 +396,6 @@ h2 {
   font-size: 0.95rem;
 }
 
-/* Company details */
-
-.company {
-  border-top: 1px solid var(--line);
-}
-
-.company-grid {
-  display: grid;
-  grid-template-columns: 5fr 6fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.company .lede {
-  max-width: 34em;
-  margin-top: 0.9rem;
-}
-
-.company-details {
-  display: grid;
-  gap: 0;
-  border-top: 1px solid var(--line);
-}
-
-.company-details div {
-  display: grid;
-  grid-template-columns: minmax(9rem, 1fr) 2fr;
-  gap: 1.5rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.company-details dt {
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.company-details dd {
-  color: var(--ink);
-  font-weight: 600;
-}
-
-.company-details a {
-  color: var(--accent);
-}
-
-.company-details a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 /* Connect section: flow diagram + audience/system lists */
 
 .connect-grid {
@@ -528,6 +474,12 @@ h2 {
   background: var(--bg);
 }
 
+.form-intro {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .contact-form label {
   display: grid;
   gap: 0.4rem;
@@ -564,6 +516,12 @@ h2 {
 .form-note {
   min-height: 1.4rem;
   font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.form-help {
+  margin: -0.35rem 0 0;
+  font-size: 0.84rem;
   color: var(--muted);
 }
 
@@ -702,11 +660,6 @@ h2 {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-
-  .company-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
 }
 
 @media (max-width: 560px) {
@@ -718,10 +671,5 @@ h2 {
   .contact-form .btn {
     width: 100%;
     text-align: center;
-  }
-
-  .company-details div {
-    grid-template-columns: 1fr;
-    gap: 0.3rem;
   }
 }

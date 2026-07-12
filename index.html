@@ -44,7 +44,6 @@
       <nav class="site-nav" id="site-nav" data-nav>
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
-        <a href="#company">Company</a>
         <a class="nav-cta" href="#contact">Get in touch</a>
         <a class="lang-switch" href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
       </nav>
@@ -102,7 +101,7 @@
                 <circle cx="293" cy="222" r="3"/>
               </g>
             </svg>
-            <p class="diagram-caption">One flow of data from factory to overseas doorstep</p>
+            <p class="diagram-caption">Order, stock and shipping data moving between systems automatically</p>
           </div>
           <div>
             <p class="kicker">What we connect</p>
@@ -200,72 +199,29 @@
         </div>
       </section>
 
-      <section class="company" id="company" aria-labelledby="company-title">
-        <div class="wrap company-grid">
-          <div>
-            <p class="kicker">Company details</p>
-            <h2 id="company-title">A registered Dutch business for AI and IT implementation</h2>
-            <p class="lede">
-              YJ Commerce is a Netherlands-based ZZP focused on practical software,
-              automation and data work for cross-border e-commerce operations.
-              The business can be verified through the Dutch Chamber of Commerce
-              registration and this domain-based email address.
-            </p>
-          </div>
-          <dl class="company-details" aria-label="YJ Commerce verification details">
-            <div>
-              <dt>Company name</dt>
-              <dd>YJ Commerce</dd>
-            </div>
-            <div>
-              <dt>Legal form</dt>
-              <dd>ZZP / independent business</dd>
-            </div>
-            <div>
-              <dt>Registration</dt>
-              <dd>Dutch Chamber of Commerce, KVK 42053028</dd>
-            </div>
-            <div>
-              <dt>Country</dt>
-              <dd>Netherlands</dd>
-            </div>
-            <div>
-              <dt>Business email</dt>
-              <dd><a href="mailto:support@yjcommerce.nl">support@yjcommerce.nl</a></dd>
-            </div>
-            <div>
-              <dt>Website</dt>
-              <dd><a href="https://yjcommerce.nl/">yjcommerce.nl</a></dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
       <section class="alt contact" id="contact" aria-labelledby="contact-title">
         <div class="wrap contact-grid">
           <div>
             <p class="kicker">Contact</p>
             <h2 id="contact-title">Tell us what isn&rsquo;t working</h2>
             <p class="lede">
-              Inventory that drifts, a process running on exports, an integration
-              that never happened. A few lines is enough. English or Chinese both work.
+              Tell us your name and what you need help with. A few lines is enough;
+              English or Chinese both work.
             </p>
             <a class="mail" href="mailto:support@yjcommerce.nl">support@yjcommerce.nl</a>
           </div>
           <form class="contact-form" data-contact-form>
+            <p class="form-intro">We&rsquo;ll open a ready-to-send email in your email app.</p>
             <label>
               Name
               <input type="text" name="name" autocomplete="name" required>
             </label>
             <label>
-              Email
-              <input type="email" name="email" autocomplete="email" required>
+              How can we help?
+              <textarea name="message" rows="5" maxlength="1500" required placeholder="For example: We need to connect our webshop and warehouse system."></textarea>
             </label>
-            <label>
-              Message
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <button class="btn" type="submit">Open in your email app</button>
+            <button class="btn" type="submit">Prepare email</button>
+            <p class="form-help">Works on phones and computers when a default email app is set up.</p>
             <p class="form-note" data-form-note aria-live="polite"></p>
           </form>
         </div>
