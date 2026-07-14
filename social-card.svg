@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">YJ Commerce cross-border network</title>
+  <desc id="desc">An abstract network connecting Europe and Asia through commerce and logistics routes</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e4edf5"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8fb4d9" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#8fb4d9" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#183b5b" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="910" cy="280" r="430" fill="url(#glow)"/>
+  <g fill="none" stroke="#b7c9d9" stroke-width="2" opacity=".9">
+    <path d="M530 332C682 214 820 206 1052 280"/>
+    <path d="M522 346C670 408 834 430 1068 344"/>
+    <path d="M566 288C686 148 856 116 1044 192"/>
+    <path d="M560 380C708 500 892 512 1076 426"/>
+  </g>
+  <g fill="#1e4e79">
+    <circle cx="530" cy="332" r="8"/>
+    <circle cx="682" cy="245" r="6"/>
+    <circle cx="820" cy="222" r="7"/>
+    <circle cx="1052" cy="280" r="9"/>
+    <circle cx="696" cy="408" r="6"/>
+    <circle cx="870" cy="422" r="7"/>
+    <circle cx="1068" cy="344" r="8"/>
+    <circle cx="720" cy="150" r="5"/>
+    <circle cx="920" cy="144" r="6"/>
+    <circle cx="748" cy="472" r="5"/>
+    <circle cx="964" cy="474" r="6"/>
+  </g>
+  <g transform="translate(86 84)" filter="url(#shadow)">
+    <rect width="394" height="462" rx="34" fill="#fff"/>
+    <rect x="48" y="48" width="76" height="76" rx="18" fill="#1e4e79"/>
+    <path d="M66 68h10l10 19 10-19h10L91 96v12H81V96L66 68Z" fill="#fff"/>
+    <path d="M102 97c-2 8-8 13-17 13-7 0-13-3-17-8l7-6c3 3 6 5 10 5s7-2 8-5l9 1Z" fill="#8fb4d9"/>
+    <text x="48" y="179" fill="#16212e" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">YJ Commerce</text>
+    <text x="48" y="238" fill="#1e4e79" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">AI &amp; IT for cross-border</text>
+    <text x="48" y="272" fill="#1e4e79" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">e-commerce</text>
+    <path d="M48 314h298" stroke="#dde6ee" stroke-width="2"/>
+    <text x="48" y="361" fill="#526476" font-family="Inter, Arial, sans-serif" font-size="19">Automation · Integrations</text>
+    <text x="48" y="393" fill="#526476" font-family="Inter, Arial, sans-serif" font-size="19">Logistics · Data</text>
+  </g>
+</svg>

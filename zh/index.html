@@ -7,29 +7,97 @@
       name="description"
       content="YJ Commerce 为跨境电商企业提供 AI 与 IT 解决方案：出海卖家、物流商、货代与海外仓的自动化、系统集成与数据看板。"
     >
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <title>YJ Commerce | 跨境电商 AI 与 IT 解决方案</title>
+    <link rel="canonical" href="https://yjcommerce.nl/zh/">
     <link rel="alternate" hreflang="en" href="https://yjcommerce.nl/">
     <link rel="alternate" hreflang="zh-Hans" href="https://yjcommerce.nl/zh/">
     <link rel="alternate" hreflang="x-default" href="https://yjcommerce.nl/">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#1e4e79">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="YJ Commerce">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:url" content="https://yjcommerce.nl/zh/">
+    <meta property="og:title" content="跨境电商 AI 与 IT 解决方案 | YJ Commerce">
+    <meta
+      property="og:description"
+      content="为出海卖家、物流商、货代与海外仓提供流程自动化、系统集成与数据看板。"
+    >
+    <meta property="og:image" content="https://yjcommerce.nl/social-card.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="连接欧洲与亚洲的跨境电商网络">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="跨境电商 AI 与 IT 解决方案 | YJ Commerce">
+    <meta name="twitter:description" content="为跨境电商运营提供自动化、系统集成与数据看板。">
+    <meta name="twitter:image" content="https://yjcommerce.nl/social-card.png">
+    <meta name="twitter:image:alt" content="连接欧洲与亚洲的跨境电商网络">
     <link rel="stylesheet" href="../styles.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "YJ Commerce",
-        "url": "https://yjcommerce.nl/",
-        "email": "support@yjcommerce.nl",
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "KVK",
-          "value": "42053028"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "NL"
-        },
-        "description": "YJ Commerce 是一家注册在荷兰的 ZZP，为跨境电商运营提供 AI 与 IT 解决方案。"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://yjcommerce.nl/#website",
+            "url": "https://yjcommerce.nl/",
+            "name": "YJ Commerce",
+            "alternateName": "YJ",
+            "inLanguage": ["en", "zh-Hans"],
+            "publisher": { "@id": "https://yjcommerce.nl/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://yjcommerce.nl/#organization",
+            "name": "YJ Commerce",
+            "url": "https://yjcommerce.nl/",
+            "logo": "https://yjcommerce.nl/logo.png",
+            "email": "support@yjcommerce.nl",
+            "description": "注册于荷兰、专注跨境电商运营的 AI 与 IT 咨询服务商。",
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "KVK",
+              "value": "42053028"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "NL"
+            },
+            "areaServed": "Worldwide",
+            "knowsLanguage": ["en", "zh-Hans"],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "support@yjcommerce.nl",
+              "contactType": "销售与支持",
+              "availableLanguage": ["English", "Chinese"]
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "跨境电商技术服务",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "流程自动化" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "系统集成" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "供应链可视化" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "仓储管理" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "物流技术" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "数据看板" } }
+              ]
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://yjcommerce.nl/zh/#webpage",
+            "url": "https://yjcommerce.nl/zh/",
+            "name": "YJ Commerce | 跨境电商 AI 与 IT 解决方案",
+            "description": "为跨境电商企业提供自动化、系统集成与数据看板。",
+            "isPartOf": { "@id": "https://yjcommerce.nl/#website" },
+            "about": { "@id": "https://yjcommerce.nl/#organization" },
+            "inLanguage": "zh-Hans"
+          }
+        ]
       }
     </script>
   </head>
@@ -56,6 +124,7 @@
           <h1 id="hero-title">从工厂到海外消费者，一体化运营。</h1>
           <p class="lede">
             为出海的中国企业及其上下游伙伴，构建自动化、系统集成与数据看板。
+            注册于荷兰，支持中文与英文沟通。
           </p>
           <div class="hero-actions">
             <a class="btn" href="#contact">聊聊您的业务</a>
