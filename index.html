@@ -7,29 +7,100 @@
       name="description"
       content="YJ Commerce builds AI and IT solutions for Chinese companies in cross-border e-commerce: sellers, logistics providers, freight forwarders, and overseas warehouses."
     >
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <title>YJ Commerce | AI and IT for Cross-Border E-commerce</title>
+    <link rel="canonical" href="https://yjcommerce.nl/">
     <link rel="alternate" hreflang="en" href="https://yjcommerce.nl/">
     <link rel="alternate" hreflang="zh-Hans" href="https://yjcommerce.nl/zh/">
     <link rel="alternate" hreflang="x-default" href="https://yjcommerce.nl/">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#1e4e79">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="YJ Commerce">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:url" content="https://yjcommerce.nl/">
+    <meta property="og:title" content="AI and IT for Cross-Border E-commerce | YJ Commerce">
+    <meta
+      property="og:description"
+      content="Automation, integrations and dashboards for cross-border sellers, logistics providers, freight forwarders and overseas warehouses."
+    >
+    <meta property="og:image" content="https://yjcommerce.nl/social-card.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Connected cross-border commerce network spanning Europe and Asia">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI and IT for Cross-Border E-commerce | YJ Commerce">
+    <meta
+      name="twitter:description"
+      content="Automation, integrations and dashboards for cross-border e-commerce operations."
+    >
+    <meta name="twitter:image" content="https://yjcommerce.nl/social-card.png">
+    <meta name="twitter:image:alt" content="Connected cross-border commerce network spanning Europe and Asia">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "YJ Commerce",
-        "url": "https://yjcommerce.nl/",
-        "email": "support@yjcommerce.nl",
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "KVK",
-          "value": "42053028"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "NL"
-        },
-        "description": "YJ Commerce is a Netherlands-based ZZP providing AI and IT solutions for cross-border e-commerce operations."
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://yjcommerce.nl/#website",
+            "url": "https://yjcommerce.nl/",
+            "name": "YJ Commerce",
+            "alternateName": "YJ",
+            "inLanguage": ["en", "zh-Hans"],
+            "publisher": { "@id": "https://yjcommerce.nl/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://yjcommerce.nl/#organization",
+            "name": "YJ Commerce",
+            "url": "https://yjcommerce.nl/",
+            "logo": "https://yjcommerce.nl/logo.png",
+            "email": "support@yjcommerce.nl",
+            "description": "Netherlands-based AI and IT consultancy for cross-border e-commerce operations.",
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "KVK",
+              "value": "42053028"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "NL"
+            },
+            "areaServed": "Worldwide",
+            "knowsLanguage": ["en", "zh-Hans"],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "support@yjcommerce.nl",
+              "contactType": "sales and support",
+              "availableLanguage": ["English", "Chinese"]
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Cross-border e-commerce technology services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workflow automation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Systems integration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Supply chain visibility" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Warehouse management" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Logistics technology" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data dashboards" } }
+              ]
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://yjcommerce.nl/#webpage",
+            "url": "https://yjcommerce.nl/",
+            "name": "YJ Commerce | AI and IT for Cross-Border E-commerce",
+            "description": "AI and IT solutions for Chinese companies in cross-border e-commerce.",
+            "isPartOf": { "@id": "https://yjcommerce.nl/#website" },
+            "about": { "@id": "https://yjcommerce.nl/#organization" },
+            "inLanguage": "en"
+          }
+        ]
       }
     </script>
   </head>
@@ -56,7 +127,8 @@
           <h1 id="hero-title">From factory to overseas doorstep, one connected operation.</h1>
           <p class="lede">
             Automation, integrations and dashboards for Chinese companies selling
-            overseas, and the partners around them.
+            overseas, and the partners around them. Based in the Netherlands,
+            working in English and Chinese.
           </p>
           <div class="hero-actions">
             <a class="btn" href="#contact">Discuss your operation</a>
